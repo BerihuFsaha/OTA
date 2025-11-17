@@ -185,7 +185,7 @@ class _ResultsPageState extends State<ResultsPage> {
                   return Container(
                     width: 64,
                     height: 48,
-                    color: Colors.grey.shade200,
+                    color: const Color.fromARGB(255, 68, 45, 45),
                     alignment: Alignment.center,
                     child: Text(carrierCode.isNotEmpty ? carrierCode : '?'),
                   );
@@ -208,7 +208,7 @@ class _ResultsPageState extends State<ResultsPage> {
                     style: TextStyle(color: Colors.grey.shade700),
                   ),
                   const SizedBox(height: 6),
-                  Text(stopsText, style: TextStyle(color: stops == 0 ? Colors.green : Colors.orange)),
+                  Text(stopsText, style: TextStyle(color: stops == 0 ? Colors.green : const Color.fromARGB(255, 117, 101, 77))),
                   const SizedBox(height: 6),
                   Text('Route: $from → $to', style: const TextStyle(fontSize: 12)),
                 ],

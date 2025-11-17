@@ -146,7 +146,7 @@ class _SearchPageState extends State<SearchPage> with TickerProviderStateMixin {
                   ),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.delete, color: Colors.redAccent),
+                  icon: const Icon(Icons.delete, color: Color.fromARGB(255, 122, 56, 56)),
                   onPressed: () => _removeMultiCitySegment(index),
                 )
               ],
@@ -247,6 +247,7 @@ class _SearchPageState extends State<SearchPage> with TickerProviderStateMixin {
       MaterialPageRoute(
         builder: (context) => ResultsPage(
           multiCityQuery: querySegments,
+          // ignore: prefer_const_literals_to_create_immutables
           filters: {},
         ),
       ),
@@ -398,6 +399,7 @@ class _SearchPageState extends State<SearchPage> with TickerProviderStateMixin {
       children: [
         Expanded(
           child: DropdownButtonFormField<int>(
+            // ignore: deprecated_member_use
             value: travellers,
             decoration: const InputDecoration(
               labelText: 'Travellers',
@@ -414,6 +416,7 @@ class _SearchPageState extends State<SearchPage> with TickerProviderStateMixin {
         const SizedBox(width: 12),
         Expanded(
           child: DropdownButtonFormField<String>(
+            // ignore: deprecated_member_use
             value: travelClass,
             decoration: const InputDecoration(
               labelText: 'Class',
